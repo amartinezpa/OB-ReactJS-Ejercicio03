@@ -1,22 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import UserComponent from './components/usercomponent';
 
 function App() {
+  const contactoPrueba = {
+    nombre: 'Aaron',
+    apellido: 'Martínez',
+    email: 'info@correo.es',
+    conectado: false,
+  };
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <UserComponent contacto={contactoPrueba} />
       </header>
     </div>
   );

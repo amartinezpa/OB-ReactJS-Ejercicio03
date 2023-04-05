@@ -1,0 +1,21 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Contacto } from '../models/contacto.class';
+import Status from './estado';
+
+function UserComponent({ contacto }) {
+  return (
+    <div>
+      <h2>Nombre: {contacto.nombre}</h2>
+      <h3>Apellidos: {contacto.apellido}</h3>
+      <h3>Email: {contacto.email}</h3>
+      <Status estado={true} />
+    </div>
+  );
+}
+
+UserComponent.propTypes = {
+  contacto: PropTypes.instanceOf(Contacto),
+};
+
+export default UserComponent;
